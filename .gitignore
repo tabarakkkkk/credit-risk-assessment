@@ -1,0 +1,29 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/raw/*
+data/processed/*
+
+# Trained Models
+models/*
+!models/.gitkeep
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
