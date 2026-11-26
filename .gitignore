@@ -27,3 +27,6 @@ models/*
 
 # OS
 .DS_Store
+
+# Keep the trained model for team integration
+!models/credit_risk_xgboost.joblib
