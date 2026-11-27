@@ -13,6 +13,7 @@ VALID_APPLICANT = {
     "person_emp_length": 5,
     "loan_intent": "PERSONAL",
     "loan_amnt": 10000,
+    "loan_int_rate": 10.5,
     "loan_percent_income": 0.13,
     "cb_person_default_on_file": "N",
     "cb_person_cred_hist_length": 5,

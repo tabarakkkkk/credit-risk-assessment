@@ -71,6 +71,13 @@ def predict_credit_risk(applicant_data):
         default_probability >= threshold
     )
 
+    if default_probability < 0.25:
+        risk_tier = "Low"
+    elif default_probability < 0.50:
+        risk_tier = "Medium"
+    else:
+        risk_tier = "High"
+
     # 6. Assign the corresponding risk category
     predicted_label = (
         "Default" if predicted_class == 1
@@ -89,5 +96,6 @@ def predict_credit_risk(applicant_data):
         "predicted_class": predicted_class,
         "predicted_label": predicted_label,
         "risk_category": risk_category,
+        "risk_tier": risk_tier,
         "decision_threshold": threshold,
     }

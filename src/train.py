@@ -24,7 +24,8 @@ from src.preprocessing import (
 )
 
 
-MODEL_PATH = Path("models/credit_risk_xgboost.joblib")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+MODEL_PATH = PROJECT_ROOT / "models" / "credit_risk_xgboost.joblib"
 DECISION_THRESHOLD = 0.50
 
 

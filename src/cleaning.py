@@ -4,8 +4,9 @@ from pathlib import Path
 import pandas as pd
 
 
-RAW_DATA_PATH = Path("data/raw/credit_risk_dataset.csv")
-PROCESSED_DATA_PATH = Path("data/processed/credit_risk_cleaned.csv")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+RAW_DATA_PATH = PROJECT_ROOT / "data" / "raw" / "credit_risk_dataset.csv"
+PROCESSED_DATA_PATH = PROJECT_ROOT / "data" / "processed" / "credit_risk_cleaned.csv"
 
 
 def clean_data():
@@ -22,10 +23,14 @@ def clean_data():
     invalid_age_count = invalid_age_mask.sum()
     df = df.loc[~invalid_age_mask].copy()
 
-    # Replace impossible employment lengths with missing values
-    invalid_emp_mask = df["person_emp_length"] > df["person_age"]
+    # Replace impossible employment lengths with missing values.
+    invalid_emp_mask = (df["person_emp_length"] < 0) | (df["person_emp_length"] > 60)
     invalid_emp_count = invalid_emp_mask.sum()
     df.loc[invalid_emp_mask, "person_emp_length"] = float("nan")
+
+    # Impute missing interest rates with the training dataset median.
+    if "loan_int_rate" in df.columns:
+        df["loan_int_rate"] = df["loan_int_rate"].fillna(df["loan_int_rate"].median())
 
     # Save cleaned data separately
     PROCESSED_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)

@@ -10,7 +10,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
-DATA_PATH = Path("data/processed/credit_risk_cleaned.csv")
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_PATH = PROJECT_ROOT / "data" / "processed" / "credit_risk_cleaned.csv"
 
 TARGET = "loan_status"
 
@@ -19,6 +20,7 @@ NUMERICAL_FEATURES = [
     "person_income",
     "person_emp_length",
     "loan_amnt",
+    "loan_int_rate",
     "loan_percent_income",
     "cb_person_cred_hist_length",
 ]

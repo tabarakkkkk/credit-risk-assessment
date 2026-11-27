@@ -1,0 +1,19 @@
+CreditLens RAG ingestion test
+=============================
+Command: .\.venv\Scripts\python.exe -m rag.ingest
+
+Run 1:
+Found 10 documents
+Created 13 chunks
+Inserted 13 new chunks
+Skipped 0 duplicate chunks
+Collection: loan_policies (13 total chunks)
+
+Run 2 (idempotency check):
+Found 10 documents
+Created 13 chunks
+Inserted 0 new chunks
+Skipped 13 duplicate chunks
+Collection: loan_policies (13 total chunks)
+
+Result: PASS
