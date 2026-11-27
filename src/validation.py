@@ -23,6 +23,7 @@ ALLOWED_CATEGORIES = {
         "HOMEIMPROVEMENT",
     },
     "cb_person_default_on_file": {
+        "N",
         "Y",
         "N",
     },
@@ -149,6 +150,9 @@ def validate_applicant_data(applicant_data):
         raise ValueError(
             "loan_amnt must be greater than zero."
         )
+
+    if validated["loan_int_rate"] < 0:
+        raise ValueError("loan_int_rate cannot be negative.")
 
     if not 0 <= validated["loan_percent_income"] <= 1:
         raise ValueError(

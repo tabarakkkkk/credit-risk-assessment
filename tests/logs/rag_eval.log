@@ -1,0 +1,9 @@
+CreditLens RAG evaluation test
+==============================
+Command: .\.venv\Scripts\python.exe -m rag.eval
+
+Questions evaluated: 20
+Correct top-3 results: 19
+Hit@3: 95.00%
+Required threshold: 80.00%
+Status: PASS

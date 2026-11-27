@@ -1,0 +1,22 @@
+[
+  {"question": "What DTI range is considered standard?", "expected_sources": ["dti_policy.md"]},
+  {"question": "What happens when DTI is above 50 percent?", "expected_sources": ["dti_policy.md"]},
+  {"question": "How should limited credit history be handled?", "expected_sources": ["credit_history_policy.md"]},
+  {"question": "How does a previous default affect review?", "expected_sources": ["previous_default_policy.md"]},
+  {"question": "What is the purpose of collateral?", "expected_sources": ["collateral_policy.md"]},
+  {"question": "What is the illustrative limit for education loans?", "expected_sources": ["loan_limits_policy.md"]},
+  {"question": "What is the illustrative limit for home improvement?", "expected_sources": ["loan_limits_policy.md"]},
+  {"question": "How are interest rate bands described?", "expected_sources": ["interest_rates_policy.md"]},
+  {"question": "What does Grade A mean?", "expected_sources": ["loan_grades_policy.md"]},
+  {"question": "What documents may be required for income verification?", "expected_sources": ["required_documents.md"]},
+  {"question": "Which factors are considered in eligibility review?", "expected_sources": ["eligibility_policy.md"]},
+  {"question": "What should happen when information is missing?", "expected_sources": ["eligibility_policy.md"]},
+  {"question": "How should repayment capacity be explained?", "expected_sources": ["repayment_policy.md"]},
+  {"question": "What hypothetical alternatives can be compared?", "expected_sources": ["repayment_policy.md"]},
+  {"question": "What is the fictional personal loan limit?", "expected_sources": ["loan_limits_policy.md"]},
+  {"question": "What should be checked for a collateral asset?", "expected_sources": ["collateral_policy.md"]},
+  {"question": "What does Grade D indicate?", "expected_sources": ["loan_grades_policy.md"]},
+  {"question": "Why does a longer credit history help review?", "expected_sources": ["credit_history_policy.md"]},
+  {"question": "What does an elevated interest rate mean in this demo?", "expected_sources": ["interest_rates_policy.md"]},
+  {"question": "What evidence can be requested for a medical loan?", "expected_sources": ["required_documents.md"]}
+]
